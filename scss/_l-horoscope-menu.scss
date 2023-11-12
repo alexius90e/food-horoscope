@@ -1,0 +1,76 @@
+.horoscope-menu {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  &__item {
+    flex: 0 1 calc(100% / 6);
+    padding: 11px;
+    box-sizing: border-box;
+    border: 1px solid $white;
+    background-color: $beige;
+    transition: background-color ease-in-out 0.2s;
+    cursor: pointer;
+
+    @include laptop {
+      flex: 0 1 calc(100% / 4);
+    }
+
+    @include mobile {
+      flex: 0 1 calc(100% / 3);
+    }
+
+    @media screen and (max-width: 390px) {
+      flex: 0 1 calc(100% / 2);
+    }
+
+    &:hover {
+      background-color: $brown;
+    }
+
+    &-image {
+      margin: 0 0 7px;
+      padding: 0;
+      text-align: center;
+
+      & img {
+        height: 70px;
+        width: 70px;
+      }
+    }
+
+    &-title {
+      margin: 0;
+      color: $brown;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-align: center;
+      text-transform: uppercase;
+      transition: color ease-in-out 0.2s;
+    }
+
+    &:hover &-title {
+      color: $white;
+    }
+
+    &-date {
+      margin: 0;
+      color: $brown;
+      font-size: 11px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-align: center;
+      text-transform: uppercase;
+      transition: color ease-in-out 0.2s;
+    }
+
+    &:hover &-date {
+      color: $white;
+    }
+  }
+}
