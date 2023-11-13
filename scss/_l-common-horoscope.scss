@@ -1,0 +1,76 @@
+.common-horoscope {
+  & .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 0;
+
+    @include tablet {
+      gap: 0;
+    }
+  }
+
+  &__card {
+    flex: 0 1 50%;
+    display: flex;
+    gap: 16px;
+    padding: 9px 15px 13px;
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+
+    &:nth-child(2n + 1) {
+      border-right: 1px dashed #a0a0a0;
+    }
+
+    @include tablet {
+      flex: 0 1 100%;
+      gap: 14px;
+      border-right: none;
+      border-bottom: 1px dashed #a0a0a0;
+    }
+
+    &-image {
+      margin: 0;
+      padding: 0;
+
+      & img {
+        width: 86px;
+        height: 86px;
+        object-fit: cover;
+      }
+    }
+
+    &-title {
+      margin: 0 0 4px;
+      color: #8c1f1f;
+      text-align: center;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+
+    &-date {
+      margin: 0;
+      color: #8c1f1f;
+      text-align: center;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+
+    &-text {
+      color: #333;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 20px;
+
+      @include mobile {
+        font-size: 12px;
+      }
+    }
+  }
+}

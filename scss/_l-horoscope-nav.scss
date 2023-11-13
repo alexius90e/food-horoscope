@@ -1,0 +1,78 @@
+.horoscope-nav {
+  & .container {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 12px;
+  }
+
+  &__item {
+    position: relative;
+    flex: 0 1 calc(100% / 4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    color: $black;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    background-color: #f1f1f1;
+    transition: all ease-in-out 0.2s;
+    cursor: pointer;
+
+    @include tablet {
+      padding: 5px 10px;
+    }
+
+    &:hover {
+      color: $white;
+      background-color: #8c1f1f;
+    }
+
+    &.active {
+      color: $white;
+      background-color: #8c1f1f;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: calc(100% - 6px);
+        left: 50%;
+        display: block;
+        height: 15px;
+        width: 38px;
+        background: url(../assets/poligon-active.svg) center bottom no-repeat;
+        transform: translateX(-50%);
+
+        @include mobile {
+          height: 10px;
+          width: 24px;
+        }
+      }
+    }
+
+    &-text {
+      @include mobile {
+        display: block;
+        width: 100%;
+        max-width: calc(100% - 1px);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      @media screen and (max-width: 380px) {
+        max-width: 66px;
+        font-size: 12px;
+      }
+
+      &_hidden {
+        @include tablet {
+          display: none;
+        }
+      }
+    }
+  }
+}

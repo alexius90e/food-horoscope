@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 html {
-  color: #1d1d1d;
+  color: #333333;
   font-size: 16px;
   font-family: "Montserrat", "Open Sans", sans-serif;
   font-weight: 400;
@@ -23,9 +23,112 @@ textarea {
 .container {
   max-width: 1170px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.horoscope-materials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 5px;
+  width: 100%;
+  padding: 0 0 10px;
+  color: #333333;
+  text-align: right;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 20px;
+}
+
+.common-horoscope .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px 0;
+}
+@media (max-width: 768px) {
+  .common-horoscope .container {
+    gap: 0;
+  }
+}
+.common-horoscope__card {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  padding: 9px 15px 13px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #f1f1f1;
+}
+.common-horoscope__card:nth-child(2n+1) {
+  border-right: 1px dashed #a0a0a0;
+}
+@media (max-width: 768px) {
+  .common-horoscope__card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    gap: 14px;
+    border-right: none;
+    border-bottom: 1px dashed #a0a0a0;
+  }
+}
+.common-horoscope__card-image {
+  margin: 0;
+  padding: 0;
+}
+.common-horoscope__card-image img {
+  width: 86px;
+  height: 86px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.common-horoscope__card-title {
+  margin: 0 0 4px;
+  color: #8c1f1f;
+  text-align: center;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.common-horoscope__card-date {
+  margin: 0;
+  color: #8c1f1f;
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.common-horoscope__card-text {
+  color: #333;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+}
+@media (max-width: 576px) {
+  .common-horoscope__card-text {
+    font-size: 12px;
+  }
 }
 
 .horoscope-menu .container {
@@ -111,4 +214,91 @@ textarea {
 }
 .horoscope-menu__item:hover .horoscope-menu__item-date {
   color: #ffffff;
+}
+
+.horoscope-nav .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  margin-bottom: 12px;
+}
+.horoscope-nav__item {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 25%;
+          flex: 0 1 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 16px;
+  color: #333333;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  background-color: #f1f1f1;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .horoscope-nav__item {
+    padding: 5px 10px;
+  }
+}
+.horoscope-nav__item:hover {
+  color: #ffffff;
+  background-color: #8c1f1f;
+}
+.horoscope-nav__item.active {
+  color: #ffffff;
+  background-color: #8c1f1f;
+}
+.horoscope-nav__item.active::after {
+  content: "";
+  position: absolute;
+  top: calc(100% - 6px);
+  left: 50%;
+  display: block;
+  height: 15px;
+  width: 38px;
+  background: url(../assets/poligon-active.svg) center bottom no-repeat;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+@media (max-width: 576px) {
+  .horoscope-nav__item.active::after {
+    height: 10px;
+    width: 24px;
+  }
+}
+@media (max-width: 576px) {
+  .horoscope-nav__item-text {
+    display: block;
+    width: 100%;
+    max-width: calc(100% - 1px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media screen and (max-width: 380px) {
+  .horoscope-nav__item-text {
+    max-width: 66px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .horoscope-nav__item-text_hidden {
+    display: none;
+  }
 }
