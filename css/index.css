@@ -131,6 +131,60 @@ textarea {
   }
 }
 
+.monthly-horoscope__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  margin: 0 0 10px;
+  padding: 9px 15px 13px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #f1f1f1;
+}
+.monthly-horoscope__card-image {
+  margin: 0;
+  padding: 0;
+}
+.monthly-horoscope__card-image img {
+  width: 86px;
+  height: 86px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.monthly-horoscope__card-title {
+  margin: 0 0 4px;
+  color: #8c1f1f;
+  text-align: center;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.monthly-horoscope__card-date {
+  margin: 0;
+  color: #8c1f1f;
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.monthly-horoscope__card-text {
+  color: #333;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+}
+@media (max-width: 576px) {
+  .monthly-horoscope__card-text {
+    font-size: 12px;
+  }
+}
+
 .horoscope-menu .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -176,6 +230,9 @@ textarea {
 .horoscope-menu__item:hover {
   background-color: #AF474E;
 }
+.horoscope-menu__item.active {
+  background-color: #AF474E;
+}
 .horoscope-menu__item-image {
   margin: 0 0 7px;
   padding: 0;
@@ -200,6 +257,9 @@ textarea {
 .horoscope-menu__item:hover .horoscope-menu__item-title {
   color: #ffffff;
 }
+.horoscope-menu__item.active .horoscope-menu__item-title {
+  color: #ffffff;
+}
 .horoscope-menu__item-date {
   margin: 0;
   color: #AF474E;
@@ -213,6 +273,9 @@ textarea {
   transition: color ease-in-out 0.2s;
 }
 .horoscope-menu__item:hover .horoscope-menu__item-date {
+  color: #ffffff;
+}
+.horoscope-menu__item.active .horoscope-menu__item-date {
   color: #ffffff;
 }
 
