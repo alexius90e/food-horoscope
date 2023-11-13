@@ -7,7 +7,6 @@
 
   &__item {
     flex: 0 1 calc(100% / 6);
-    padding: 11px;
     box-sizing: border-box;
     border: 1px solid $white;
     background-color: $beige;
@@ -34,6 +33,12 @@
       background-color: $brown;
     }
 
+    &-link {
+      display: block;
+      padding: 11px;
+      text-decoration: none;
+    }
+
     &-image {
       margin: 0 0 7px;
       padding: 0;
@@ -54,6 +59,7 @@
       line-height: normal;
       text-align: center;
       text-transform: uppercase;
+      text-decoration: none;
       transition: color ease-in-out 0.2s;
     }
 
@@ -74,6 +80,7 @@
       line-height: normal;
       text-align: center;
       text-transform: uppercase;
+      text-decoration: none;
       transition: color ease-in-out 0.2s;
     }
 
