@@ -11,7 +11,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 16px;
     color: $black;
     font-size: 14px;
     font-style: normal;
@@ -22,9 +21,7 @@
     transition: all ease-in-out 0.2s;
     cursor: pointer;
 
-    @include tablet {
-      padding: 5px 10px;
-    }
+
 
     &:hover {
       color: $white;
@@ -54,6 +51,9 @@
     }
 
     & a {
+      display: inline-block;
+      width: 100%;
+      padding: 16px;
       color: $black;
       font-size: 14px;
       font-style: normal;
@@ -61,6 +61,10 @@
       line-height: normal;
       text-align: center;
       text-decoration: none;
+
+      @include tablet {
+        padding: 5px 10px;
+      }
     }
 
     &:hover a {
