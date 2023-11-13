@@ -17,15 +17,20 @@
     box-sizing: border-box;
     background-color: #f1f1f1;
 
-    &:nth-child(2n + 1) {
-      border-right: 1px dashed #a0a0a0;
-    }
-
     @include tablet {
       flex: 0 1 100%;
       gap: 14px;
       border-right: none;
       border-bottom: 1px dashed #a0a0a0;
+      background-color: $white;
+    }
+
+    &:nth-child(2n + 1) {
+      border-right: 1px dashed #a0a0a0;
+
+      @include tablet {
+        border-right: none;
+      }
     }
 
     &-image {

@@ -53,6 +53,24 @@
       }
     }
 
+    & a {
+      color: $black;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    &:hover a {
+      color: $white;
+    }
+
+    &.active a {
+      color: $white;
+    }
+
     &-text {
       @include mobile {
         display: block;
